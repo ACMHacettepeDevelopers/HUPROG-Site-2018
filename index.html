@@ -41,16 +41,17 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html">Optics</a> </div>
+      <a class="navbar-brand" href="index.html">HUPROG'18</a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#home" class="page-scroll">Home</a></li>
-        <li><a href="#about-section" class="page-scroll">About</a></li>
-        <li><a href="#services-section" class="page-scroll">Services</a></li>
-        <li><a href="#works-section" class="page-scroll">Portfolio</a></li>
+        <li><a href="#home" class="page-scroll">Ana Sayfa</a></li>
+        <li><a href="#about-section" class="page-scroll">Hakkında</a></li>
+        
+        <li><a href="#works-section" class="page-scroll">Geçen Yıl HUPROG</a></li>
         <li><a href="#team-section" class="page-scroll">Team</a></li>
+        <li><a href="#services-section" class="page-scroll">Sponsorlar</a></li>
         <li><a href="#contact-section" class="page-scroll">Contact</a></li>
       </ul>
     </div>
@@ -62,111 +63,91 @@
 <!-- Header -->
 <header class="text-center" name="home">
   <div class="intro-text">
-    <h1>We are <span class="color">Optics</span></h1>
-    <p>An award winning digital design and development company</p>
+    <h1>HUPROG<span class="color">'18</span></h1>
+    <p>Hacettepe Üniversitesi Programlama Yarışması</p>
+    <p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Apr 23, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
     <div class="clearfix"></div>
-    <a href="#about-section" class="btn btn-default btn-lg page-scroll">Learn More</a> </div>
+    <a href="#about-section" class="btn btn-default btn-lg page-scroll">Bilgi Al</a> </div>
 </header>
 <!-- About Section -->
 <div id="about-section">
   <div class="container">
     <div class="section-title">
-      <h2>About Us</h2>
+      <h2>Hakkında</h2>
       <hr>
     </div>
-    <div class="space"></div>
     <div class="row">
       <div class="col-md-4">
-        <h4>Who We Are</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh ante facilisis bibendum.</p>
+        <h4>ACM Nedir?</h4>
+        <p>ACM (Association for Computing Machinery) 100.000’i aşkın üyesiyle alanında dünyanın en büyüğü olma özelliğine sahip, eğitsel ve bilimsel bir bilişim topluluğudur. 1947 yılında New York’da kurulan ACM, kurulduğu günden bu yana yayınladığı dergileri, zengin kütüphanesi ve bünyesinde barındırdığı profesyonel kulüpleri, özel araştırma grupları ve öğrenci kollarıyla bilgisayar bilimlerinin ilerlemesine öncülük etmektedir.
+
+ACM Hacettepe Öğrenci Topluluğu, ACM’e bağlı dünya üzerindeki 821, Türkiye’deki 13 öğrenci kolundan birisidir. 2010 yılında kurulan topluluğumuz, kurulduğu günden bu yana öncelikle Hacettepe Üniversitesi öğrencileri olmak üzere ulaşabildiği tüm öğrenciler için bilgisayar bilimlerine ilgiyi artıracak ve bu alanda farkındalık yaratacak etkinlikler düzenlemektedir. Bunun yanında sadece bilişim alanında kısıtlı kalmayıp aynı hedef kitlesinin sosyal bir birey olarak gelişimine katkı sağlamayı da kendimize görev bilmekteyiz.</p>
       </div>
       <div class="col-md-4">
-        <h4>What We Do</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh ante facilisis bibendum.</p>
+        <h4>HUPROG Nedir</h4>
+        <p>HUPROG'17 (Hacettepe Üniversitesi Programlama Yarışması); Türkiye'deki tüm öğrencilere açık olan ve 7 Nisan 2017 tarihinde, Hacettepe Üniversitesi Beytepe Kampüsü'nde gerçekleştirilmesi planlanan bir programlama yarışmasıdır. İlkini geçen yıl gerçekleştirdiğimiz ve başarıyla sonuçlandırdığımız etkinliğimizin bu sene; çapını ve süresini artırıp daha geniş kitlelere ulaşmayı hedefliyoruz. Yarışma, "HackerRank" ortamı üzerinde gerçekleştirilip; katılım takımlar halinde olacaktır. Bireysel katılımlar, tek kişilik takımlar gibi değerlendirilecektir.Takımlar maksimum 3 kişilik olup yarışmaya katılacak takımlar, yaptığımız ön elemeyle belirlenecektir ve eleme sonucunda ilk 20 sırada bulunan takımlara yarışmaya katılma hakkı tanınacaktır.</p>
       </div>
       <div class="col-md-4">
+        <h4>Yönetim ve İçerik</h4>
+        <p>Yöntem ve İçerik Yarışmayı gerçekleştireceğimiz platform olan HackerRank; üzerinde binlerce online yarışma düzenlenmiş, güvenlik ve kalite konusunda kendini kanıtlamış bir platformdur. Yarışma her ne kadar online bir platformda gerçekleşecek olsa da fiziksel katılım koşulu aranacak ve takımlar 24 saat boyunca tarafımızca belirlenen bir alanda yarışacaklardır. Yarışma, diğer programlama yarışmalarından da alışılagelmiş olduğu üzere, zorlukları ve puanları farklı olan problemlerden oluşacaktır. Takımlar bu problemleri istenilen şekilde çözerek, yazdıkları programlarla sorular için belirlenen puanları toplayacaktır. Bu süreçte yarışmacıların yazdıkları algoritmanın çözebildiği girdi miktarı ve bu girdileri belirlenen zaman sınırları içerisinde işleyip çözüme ulaşabilmesi dikkate alınacaktır. HackerRank platformunun sağladığı avantajlar sayesinde takımlar; herhangi bir programlama dili sınırı olmadan 30 farklı programlama dilinden istediklerini kullanarak problemleri çözebileceklerdir. Puan eşitliği durumunda, o puana en çabuk ulaşan takım daha üst sırada kabul edilecektir. Yarışmada en yüksek 3 puana ulaşan takım ödüllendirilecek ve katılan her takıma, katılımdan dolayı ufak bir hediye verilecektir.</p>
+      </div>
+ <!--     <div class="col-md-4">
         <h4>Why Choose Us</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh ante facilisis bibendum.</p>
-      </div>
+      </div>  -->
     </div>
   </div>
 </div>
 <!-- Services Section -->
-<div id="services-section">
-  <div class="container">
-    <div class="section-title">
-      <h2>Our Services</h2>
-      <hr>
-    </div>
-    <div class="space"></div>
-    <div class="row">
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
-        <h4>Web design</h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-gears"></i>
-        <h4>App Development</h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-pie-chart"></i>
-        <h4>Analystics</h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-line-chart"></i>
-        <h4>Marketing</h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
-      </div>
-    </div>
-    <div class="space"></div>
-    <div class="row">
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-shopping-cart"></i>
-        <h4>eCommerce</h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-file-text-o"></i>
-        <h4>Content Development</h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-rocket"></i>
-        <h4>Branding</h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
-      </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-camera"></i>
-        <h4>Video & Photography</h4>
-        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
-      </div>
-    </div>
-  </div>
-</div>
+
 <!-- Portfolio Section -->
 <div id="works-section">
   <div class="container"> <!-- Container -->
     <div class="section-title">
-      <h2>Our Portfolio</h2>
+      <h2>Geçen Yıl HUPROG</h2>
       <hr>
       <div class="clearfix"></div>
     </div>
-    <div class="categories">
-      <ul class="cat">
-        <li>
-          <ol class="type">
-            <li><a href="#" data-filter="*" class="active">All</a></li>
-            <li><a href="#" data-filter=".web">Web Design</a></li>
-            <li><a href="#" data-filter=".app">App Development</a></li>
-            <li><a href="#" data-filter=".branding">Branding</a></li>
-          </ol>
-        </li>
-      </ul>
-      <div class="clearfix"></div>
-    </div>
+    
     <div class="row">
       <div class="portfolio-items">
         <div class="col-sm-6 col-md-3 col-lg-3 web">
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/01.jpg" rel="prettyPhoto">
               <div class="hover-text">
-                <h4>Project Title</h4>
-                <small>Web Design</small>
+                <h4>HUPROG'17</h4>
+                <small>Geçen yıl HUPROG...</small> 
                 <div class="clearfix"></div>
               </div>
               <img src="img/portfolio/01.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -176,8 +157,8 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/02.jpg" rel="prettyPhoto">
               <div class="hover-text">
-                <h4>Project Title</h4>
-                <small>App Development</small>
+                <h4>HUPROG'17</h4>
+                <small>Geçen yıl HUPROG...</small>
                 <div class="clearfix"></div>
               </div>
               <img src="img/portfolio/02.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -187,8 +168,8 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/03.jpg" rel="prettyPhoto">
               <div class="hover-text">
-                <h4>Project Title</h4>
-                <small>Web Design</small>
+                <h4>HUPROG'17</h4>
+                <small>Geçen yıl HUPROG...</small>
                 <div class="clearfix"></div>
               </div>
               <img src="img/portfolio/03.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -198,8 +179,8 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/04.jpg" rel="prettyPhoto">
               <div class="hover-text">
-                <h4>Project Title</h4>
-                <small>Web Design</small>
+                <h4>HUPROG'17</h4>
+                <small>Geçen yıl HUPROG...</small>
                 <div class="clearfix"></div>
               </div>
               <img src="img/portfolio/04.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -209,8 +190,8 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/05.jpg" rel="prettyPhoto">
               <div class="hover-text">
-                <h4>Project Title</h4>
-                <small>App Development</small>
+                <h4>HUPROG'17</h4>
+                <small>Geçen yıl HUPROG...</small>
                 <div class="clearfix"></div>
               </div>
               <img src="img/portfolio/05.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -220,8 +201,8 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/06.jpg" rel="prettyPhoto">
               <div class="hover-text">
-                <h4>Project Title</h4>
-                <small>Branding</small>
+                <h4>HUPROG'17</h4>
+                <small>Geçen yıl HUPROG...</small>
                 <div class="clearfix"></div>
               </div>
               <img src="img/portfolio/06.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -231,8 +212,8 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/07.jpg" rel="prettyPhoto">
               <div class="hover-text">
-                <h4>Project Title</h4>
-                <small>App Development, Branding</small>
+                <h4>HUPROG'17</h4>
+                <small>Geçen yıl HUPROG...</small>
                 <div class="clearfix"></div>
               </div>
               <img src="img/portfolio/07.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -242,8 +223,8 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/08.jpg" rel="prettyPhoto">
               <div class="hover-text">
-                <h4>Project Title</h4>
-                <small>Web Design</small>
+                <h4>HUPROG'17</h4>
+                <small>Geçen yıl HUPROG...</small>
                 <div class="clearfix"></div>
               </div>
               <img src="img/portfolio/08.jpg" class="img-responsive" alt="Project Title"> </a> </div>
@@ -296,6 +277,53 @@
     </div>
   </div>
 </div>
+
+<div id="services-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Sponsorlarımız</h2>
+      <hr>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
+        <h4>Web design</h4>
+        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+      </div>
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-gears"></i>
+        <h4>App Development</h4>
+        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
+      </div>
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-pie-chart"></i>
+        <h4>Analystics</h4>
+        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+      </div>
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-line-chart"></i>
+        <h4>Marketing</h4>
+        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
+      </div>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-shopping-cart"></i>
+        <h4>eCommerce</h4>
+        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+      </div>
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-file-text-o"></i>
+        <h4>Content Development</h4>
+        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
+      </div>
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-rocket"></i>
+        <h4>Branding</h4>
+        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+      </div>
+      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-camera"></i>
+        <h4>Video & Photography</h4>
+        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Contact Section -->
 <div id="contact-section">
   <div class="container">
@@ -344,11 +372,11 @@
   <div class="container">
     <div class="social">
       <ul>
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/acmhacettepe/"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/acmhacettepe/"><i class="fa fa-twitter"></i></a></li>
         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
         <li><a href="#"><i class="fa fa-github"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.instagram.com/acmhacettepe/"><i class="fa fa-instagram"></i></a></li>
         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
       </ul>
     </div>
