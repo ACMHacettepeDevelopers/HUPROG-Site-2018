@@ -48,7 +48,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home" class="page-scroll">Ana Sayfa</a></li>
         <li><a href="#about-section" class="page-scroll">Hakkında</a></li>
-        
+        <li><a href="#odul-section" class="page-scroll">Ödüller</a></li>
         <li><a href="#works-section" class="page-scroll">Geçen Yıl HUPROG</a></li>
         <li><a href="#team-section" class="page-scroll">Team</a></li>
         <li><a href="#services-section" class="page-scroll">Sponsorlar</a></li>
@@ -63,6 +63,7 @@
 <!-- Header -->
 <header class="text-center" name="home">
   <div class="intro-text">
+
     <h1>HUPROG<span class="color">'18</span></h1>
     <p>Hacettepe Üniversitesi Programlama Yarışması</p>
     <p id="demo"></p>
@@ -86,7 +87,7 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
+  // Display the result in an element with id="demo"
   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
@@ -95,10 +96,12 @@ var x = setInterval(function() {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
-}, 1000);
+}, 500);
+
 </script>
     <div class="clearfix"></div>
-    <a href="#about-section" class="btn btn-default btn-lg page-scroll">Bilgi Al</a> </div>
+    <a href="https://www.facebook.com/acmhacettepe" class="btn btn-default btn-lg">Kaydol</a><a href="#about-section" class="btn btn-default btn-lg page-scroll">Bilgi Al</a>  </div>
+
 </header>
 <!-- About Section -->
 <div id="about-section">
@@ -108,19 +111,18 @@ var x = setInterval(function() {
       <hr>
     </div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <h4>ACM Nedir?</h4>
         <p>ACM (Association for Computing Machinery) 100.000’i aşkın üyesiyle alanında dünyanın en büyüğü olma özelliğine sahip, eğitsel ve bilimsel bir bilişim topluluğudur. 1947 yılında New York’da kurulan ACM, kurulduğu günden bu yana yayınladığı dergileri, zengin kütüphanesi ve bünyesinde barındırdığı profesyonel kulüpleri, özel araştırma grupları ve öğrenci kollarıyla bilgisayar bilimlerinin ilerlemesine öncülük etmektedir.
-
-ACM Hacettepe Öğrenci Topluluğu, ACM’e bağlı dünya üzerindeki 821, Türkiye’deki 13 öğrenci kolundan birisidir. 2010 yılında kurulan topluluğumuz, kurulduğu günden bu yana öncelikle Hacettepe Üniversitesi öğrencileri olmak üzere ulaşabildiği tüm öğrenciler için bilgisayar bilimlerine ilgiyi artıracak ve bu alanda farkındalık yaratacak etkinlikler düzenlemektedir. Bunun yanında sadece bilişim alanında kısıtlı kalmayıp aynı hedef kitlesinin sosyal bir birey olarak gelişimine katkı sağlamayı da kendimize görev bilmekteyiz.</p>
+		ACM Hacettepe Öğrenci Topluluğu, ACM’e bağlı dünya üzerindeki 821, Türkiye’deki 13 öğrenci kolundan birisidir. 2010 yılında kurulan topluluğumuz, kurulduğu günden bu yana öncelikle Hacettepe Üniversitesi öğrencileri olmak üzere ulaşabildiği tüm öğrenciler için bilgisayar bilimlerine ilgiyi artıracak ve bu alanda farkındalık yaratacak etkinlikler düzenlemektedir. Bunun yanında sadece bilişim alanında kısıtlı kalmayıp aynı hedef kitlesinin sosyal bir birey olarak gelişimine katkı sağlamayı da kendimize görev bilmekteyiz.</p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <h4>HUPROG Nedir</h4>
         <p>HUPROG'17 (Hacettepe Üniversitesi Programlama Yarışması); Türkiye'deki tüm öğrencilere açık olan ve 7 Nisan 2017 tarihinde, Hacettepe Üniversitesi Beytepe Kampüsü'nde gerçekleştirilmesi planlanan bir programlama yarışmasıdır. İlkini geçen yıl gerçekleştirdiğimiz ve başarıyla sonuçlandırdığımız etkinliğimizin bu sene; çapını ve süresini artırıp daha geniş kitlelere ulaşmayı hedefliyoruz. Yarışma, "HackerRank" ortamı üzerinde gerçekleştirilip; katılım takımlar halinde olacaktır. Bireysel katılımlar, tek kişilik takımlar gibi değerlendirilecektir.Takımlar maksimum 3 kişilik olup yarışmaya katılacak takımlar, yaptığımız ön elemeyle belirlenecektir ve eleme sonucunda ilk 20 sırada bulunan takımlara yarışmaya katılma hakkı tanınacaktır.</p>
       </div>
-      <div class="col-md-4">
-        <h4>Yönetim ve İçerik</h4>
-        <p>Yöntem ve İçerik Yarışmayı gerçekleştireceğimiz platform olan HackerRank; üzerinde binlerce online yarışma düzenlenmiş, güvenlik ve kalite konusunda kendini kanıtlamış bir platformdur. Yarışma her ne kadar online bir platformda gerçekleşecek olsa da fiziksel katılım koşulu aranacak ve takımlar 24 saat boyunca tarafımızca belirlenen bir alanda yarışacaklardır. Yarışma, diğer programlama yarışmalarından da alışılagelmiş olduğu üzere, zorlukları ve puanları farklı olan problemlerden oluşacaktır. Takımlar bu problemleri istenilen şekilde çözerek, yazdıkları programlarla sorular için belirlenen puanları toplayacaktır. Bu süreçte yarışmacıların yazdıkları algoritmanın çözebildiği girdi miktarı ve bu girdileri belirlenen zaman sınırları içerisinde işleyip çözüme ulaşabilmesi dikkate alınacaktır. HackerRank platformunun sağladığı avantajlar sayesinde takımlar; herhangi bir programlama dili sınırı olmadan 30 farklı programlama dilinden istediklerini kullanarak problemleri çözebileceklerdir. Puan eşitliği durumunda, o puana en çabuk ulaşan takım daha üst sırada kabul edilecektir. Yarışmada en yüksek 3 puana ulaşan takım ödüllendirilecek ve katılan her takıma, katılımdan dolayı ufak bir hediye verilecektir.</p>
+      <div class="col-md-12">
+        <h4>Yöntem ve İçerik</h4>
+        <p>Yarışmayı gerçekleştireceğimiz platform olan HackerRank; üzerinde binlerce online yarışma düzenlenmiş, güvenlik ve kalite konusunda kendini kanıtlamış bir platformdur. Yarışma her ne kadar online bir platformda gerçekleşecek olsa da fiziksel katılım koşulu aranacak ve takımlar 24 saat boyunca tarafımızca belirlenen bir alanda yarışacaklardır. Yarışma, diğer programlama yarışmalarından da alışılagelmiş olduğu üzere, zorlukları ve puanları farklı olan problemlerden oluşacaktır. Takımlar bu problemleri istenilen şekilde çözerek, yazdıkları programlarla sorular için belirlenen puanları toplayacaktır. Bu süreçte yarışmacıların yazdıkları algoritmanın çözebildiği girdi miktarı ve bu girdileri belirlenen zaman sınırları içerisinde işleyip çözüme ulaşabilmesi dikkate alınacaktır. HackerRank platformunun sağladığı avantajlar sayesinde takımlar; herhangi bir programlama dili sınırı olmadan 30 farklı programlama dilinden istediklerini kullanarak problemleri çözebileceklerdir. Puan eşitliği durumunda, o puana en çabuk ulaşan takım daha üst sırada kabul edilecektir. Yarışmada en yüksek 3 puana ulaşan takım ödüllendirilecek ve katılan her takıma, katılımdan dolayı ufak bir hediye verilecektir.</p>
       </div>
  <!--     <div class="col-md-4">
         <h4>Why Choose Us</h4>
@@ -130,7 +132,32 @@ ACM Hacettepe Öğrenci Topluluğu, ACM’e bağlı dünya üzerindeki 821, Tür
   </div>
 </div>
 <!-- Services Section -->
-
+<div id="odul-section">
+  <div class="container">
+    <div class="section-title">
+      <h2><br><br><br>Ödüller</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h2 align="center">Birinci Takım</h2>
+        <p  align="center" ><font face="tahoma" size="6,9999">3000</font> TL</p>
+      </div>
+      <div class="col-md-4">
+        <h2 align="center">İkinci Takım</h2>
+        <p  align="center" ><font face="tahoma" size="6,9999">2000</font> TL</p>
+      </div>
+      <div class="col-md-4">
+        <h2 align="center">Üçüncü Takım</h2>
+        <p  align="center" ><font face="tahoma" size="6,9999">1000</font> TL</p><br><br>
+      </div>
+ <!--     <div class="col-md-4">
+        <h4>Why Choose Us</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh ante facilisis bibendum.</p>
+      </div>  -->
+    </div>
+  </div>
+</div>
 <!-- Portfolio Section -->
 <div id="works-section">
   <div class="container"> <!-- Container -->
@@ -238,11 +265,45 @@ ACM Hacettepe Öğrenci Topluluğu, ACM’e bağlı dünya üzerindeki 821, Tür
 <div id="team-section">
   <div class="container">
     <div class="section-title">
-      <h2>Meet the Team</h2>
+      <h2>Sponsorlarımız</h2>
       <hr>
     </div>
     <div id="row">
+      <div class="col-md-12 col-sm-6 team">
+        <div class="thumbnail" align="center"> <img style="height:100px;width: 600px" src="img/team/hacettepeacm.png" alt="..." class="caption">
+          <div class="caption">
+            <h3>Hacettepe University</h3>
+            <p>Altın Sponsor</p>
+          </div>
+        </div>
+      </div>
       <div class="col-md-3 col-sm-6 team">
+        <div class="thumbnail"> <img src="img/team/02.jpg" alt="..." class="team-img">
+          <div class="caption">
+            <h3>Mike Doe</h3>
+            <p>Web Designer</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 team">
+        <div class="thumbnail"> <img src="img/team/02.jpg" alt="..." class="team-img">
+          <div class="caption">
+            <h3>Jane Doe</h3>
+            <p>Creative Director</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 team">
+        <div class="thumbnail"> <img src="img/team/02.jpg" alt="..." class="team-img">
+          <div class="caption">
+            <h3>Larry Show</h3>
+            <p>Project Manager</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="row">
+      <div class="col-md-3 col-sm-6 team">	   
         <div class="thumbnail"> <img src="img/team/01.jpg" alt="..." class="team-img">
           <div class="caption">
             <h3>John Doe</h3>
@@ -259,7 +320,7 @@ ACM Hacettepe Öğrenci Topluluğu, ACM’e bağlı dünya üzerindeki 821, Tür
         </div>
       </div>
       <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"> <img src="img/team/03.jpg" alt="..." class="team-img">
+        <div class="thumbnail"> <img src="img/team/02.jpg" alt="..." class="team-img">
           <div class="caption">
             <h3>Jane Doe</h3>
             <p>Creative Director</p>
@@ -267,7 +328,7 @@ ACM Hacettepe Öğrenci Topluluğu, ACM’e bağlı dünya üzerindeki 821, Tür
         </div>
       </div>
       <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"> <img src="img/team/04.jpg" alt="..." class="team-img">
+        <div class="thumbnail"> <img src="img/team/02.jpg" alt="..." class="team-img">
           <div class="caption">
             <h3>Larry Show</h3>
             <p>Project Manager</p>
@@ -281,7 +342,7 @@ ACM Hacettepe Öğrenci Topluluğu, ACM’e bağlı dünya üzerindeki 821, Tür
 <div id="services-section">
   <div class="container">
     <div class="section-title">
-      <h2>Sponsorlarımız</h2>
+      <h2>Sponsor</h2>
       <hr>
     </div>
     <div class="space"></div>
