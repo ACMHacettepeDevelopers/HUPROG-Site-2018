@@ -225,7 +225,7 @@ img.team-img {
 	padding-bottom: 10px;
 	display: block;
 }
-/* Gallery Section 
+/* Gallery Section
 ==============================*/
 #works-section {
 	padding: 100px 0;
@@ -437,6 +437,18 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	color: #71bd46;
 }
 
+/* Root's Codes Start */
+#hours, #seconds, .green-font{
+	color: #83BA57 !important;
+}
+@media (max-width: 360px) {
+	.btn-sponsor{
+		margin-top: 16px;
+	}
+}
+
+/* Root's Codes End */
+
 @media (max-width: 768px) {
 .content {
 	padding: 40% 0 0;
@@ -447,6 +459,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #menu.navbar-default {
 	background-color: rgba(0, 0, 0, 0.7);
 }
+.huprog-logo{
+	margin-top: 60px;
+}
 label {
 	float: none !important
 }
@@ -454,4 +469,3 @@ label {
 	padding: 15% 10%;
 }
 }
-
