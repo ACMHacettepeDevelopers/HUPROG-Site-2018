@@ -227,7 +227,7 @@ th {
     page-break-inside: avoid;
   }
   img {
-    max-width: 200% !important;
+    max-width: 100% !important;
   }
   p,
   h2,
@@ -1117,12 +1117,18 @@ img {
   max-width: 200%;
   height: auto;
 }
+.hover-bg > img,
+.hover-bg > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .img-rounded {
   border-radius: 6px;
 }
 .img-thumbnail {
   display: inline-block;
-  max-width: 200%;
+  max-width: 100%;
   height: auto;
   padding: 4px;
   line-height: 1.42857143;
@@ -4877,6 +4883,7 @@ a.badge:focus {
   }
 }
 .thumbnail {
+  max-width: 200%;
   display: block;
   padding: 4px;
   margin-bottom: 20px;
